@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAZN - The Global Home of Sport</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dazn-red': '#FF0046',
+                        'dazn-dark': '#0D0D0D',
+                        'dazn-gray': '#1A1A1A',
+                        'dazn-light-gray': '#2A2A2A',
+                        'dazn-green': '#7ED321',
+                        'dazn-yellow': '#FFB800',
+                        'dazn-white': '#FFF'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- <style>
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0D0D0D; }
+        ::-webkit-scrollbar-thumb { background: #7ED321; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #6bb01a; }
+    </style> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-dazn-dark text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-dazn-dark/95 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-8">
+                    <div class="flex items-center space-x-2">
+                        <img src="https://icdb.tv/images/b93f59f5be47cadaaedbfb49d2845cf9.jpg" 
+                        class="w-10 h-10 rounded flex items-center justify-center">
+                    
+                        
+                    </div>
+                    
+                    <!-- Desktop Navigation -->
+                    <div class="hidden lg:flex items-center space-x-8">
+                        <a href="#" class="text-dazn-green hover:text-white transition-colors duration-300 font-semibold">Home</a>
+                        <div class="relative group">
+                            <a href="#" class="text-white hover:text-dazn-green transition-colors duration-300 flex items-center">
+                                All sports <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                        <a href="#" class="text-white hover:text-dazn-green transition-colors duration-300">Live TV</a>
+                        <a href="#" class="text-white hover:text-dazn-green transition-colors duration-300">Schedule</a>
+                    </div>
+                </div>
+                
+                <!-- Right Side Navigation -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <i class="fas fa-search text-white hover:text-dazn-green cursor-pointer text-lg transition-colors duration-300"></i>
+                    <button class="bg-transparent border border-white text-white px-4 py-2 rounded hover:bg-white hover:text-black transition-all duration-300">
+                        Subscribe
+                    </button>
+                    <div class="w-8 h-8 bg-dazn-green rounded-full flex items-center justify-center cursor-pointer hover:bg-green-600 transition-colors duration-300">
+                        <span class="text-black font-bold">D</span>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-dazn-gray">
+            <div class="px-4 pt-2 pb-3 space-y-1">
+                <a href="#" class="block px-3 py-2 text-dazn-green font-semibold">Home</a>
+                <a href="#" class="block px-3 py-2 text-white hover:text-dazn-green transition-colors">All sports</a>
+                <a href="#" class="block px-3 py-2 text-white hover:text-dazn-green transition-colors">Live TV</a>
+                <a href="#" class="block px-3 py-2 text-white hover:text-dazn-green transition-colors">Schedule</a>
+                <button class="w-full mt-4 bg-transparent border border-white text-white px-4 py-2 rounded hover:bg-white hover:text-black transition-all duration-300">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel -->
+    <section class="relative h-screen overflow-hidden mt-16">
+        <div class="relative w-full h-full">
+            <!-- Slide 1: Chelsea vs Bayer Leverkusen -->
+            <div class="carousel-slide active absolute inset-0">
+                <div class="absolute inset-0">
+                    <img src="https://contentful-asset-proxy.sd.indazn.com/vhp9jnid12wf/64JKxQoSs0bkZrc6BkSZd1/ec558c430c50a8ca28ca1188bd678d2d/01-Mobile_-5x7_CHEvsLEV.jpg?fm=webp&q=50?fm=webp&q=50" 
+                         alt="Chelsea vs Bayer Leverkusen" 
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+                </div>
+                <div class="relative z-10 h-full flex items-center">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                        <div class="max-w-2xl">
+                            <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+                                Chelsea vs. <span class="text-dazn-red">Bayer Leverkusen</span>
+                            </h1>
+                            <p class="text-lg md:text-xl mb-8 text-gray-200">
+                                Soccer doesn't stop on DAZN! Watch European giants go head-to-head this preseason, including Barcelona, Borussia Dortmund and Juventus.
+                            </p>
+                            <button class="bg-dazn-red text-white px-8 py-3 rounded font-semibold hover:bg-red-600 transition-all duration-300 transform hover:scale-105">
+                                Watch for free
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: DAZN Bet Boxing Club -->
+            <!-- <div class="carousel-slide active absolute inset-0">
+                <div class="absolute inset-0">
+                    <img src="https://contentful-asset-proxy.sd.indazn.com/vhp9jnid12wf/1qomnugQd0YVI1Fi5k8RHh/81b9dcb7e09181f1b0367a8d54376961/03-Tablet_-1x1_CF_Generic_Barcelona.jpg?fm=webp&q=50?fm=webp&q=50" 
+                         alt="Chelsea vs Bayer Leverkusen" 
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+                </div>
+                <div class="relative z-10 h-full flex items-center">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                        <div class="max-w-2xl">
+                            <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+                                Chelsea vs. <span class="text-dazn-red">Bayer Leverkusen</span>
+                            </h1>
+                            <p class="text-lg md:text-xl mb-8 text-gray-200">
+                                Soccer doesn't stop on DAZN! Watch European giants go head-to-head this preseason, including Barcelona, Borussia Dortmund and Juventus.
+                            </p>
+                            <button class="bg-dazn-red text-white px-8 py-3 rounded font-semibold hover:bg-red-600 transition-all duration-300 transform hover:scale-105">
+                                Watch for free
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+
+            <!-- Slide 3: Serie A -->
+            <div class="carousel-slide absolute inset-0 opacity-0">
+                <div class="absolute inset-0">
+                    <img src="https://contentful-asset-proxy.sd.indazn.com/vhp9jnid12wf/1qomnugQd0YVI1Fi5k8RHh/81b9dcb7e09181f1b0367a8d54376961/03-Tablet_-1x1_CF_Generic_Barcelona.jpg?fm=webp&q=50?fm=webp&q=50" 
+                         alt="Serie A" 
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/60"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent"></div>
+                </div>
+                <div class="relative z-10 h-full flex items-center">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                        <div class="inline-block bg-white text-black px-3 py-1 rounded text-sm font-semibold mb-4">
+                                Football
+                            </div>
+                        <div class="max-w-2xl">
+                            <h1 class="text-2xl md:text-4xl font-bold mb-4 leading-tight">
+                                Pre <span class="text-red-500">Season</span> on DAZN
+                            </h1>
+                            <p class="text-lg md:text-xl mb-8 text-gray-200">
+                                Football doesn't stop on DAZN! Watch European giants go head-to-head this preseason, including Barcelona, Borussia Dortmund and Chelsea.
+                            </p>
+                            <button class="bg-dazn-red text-white px-8 py-3 rounded font-semibold hover:bg-red-600 transition-all duration-300 transform hover:scale-105">
+                                Discover more
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: EWC 2025 Boxing -->
+            <div class="carousel-slide absolute inset-0 opacity-0">
+                <div class="absolute inset-0">
+                    <img src="https://contentful-asset-proxy.sd.indazn.com/vhp9jnid12wf/4yoPpU1TokqCOifF5kAWqF/4be7c6df3aaa54c9ba347c8ef73d30af/01-Mobile_-5x7_1x.jpg?fm=webp&q=50?fm=webp&q=50" 
+                         alt="EWC 2025 Boxing" 
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent"></div>
+                </div>
+                <div class="relative z-10 h-full flex items-center">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                        <div class="max-w-2xl">
+                            <div class="inline-block bg-white text-black px-3 py-1 rounded text-sm font-semibold mb-4">
+                                Sat Aug 16th at 1:00 PM
+                            </div>
+                            <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+                                EWC 2025: <span class="text-dazn-red">Itauma vs. Whyte</span>
+                            </h1>
+                            <p class="text-lg md:text-xl mb-8 text-gray-200">
+                                Rising force Itauma meets battle-tested Whyte in a defining British heavyweight showdown.
+                            </p>
+                            <button class="bg-dazn-red text-white px-8 py-3 rounded font-semibold hover:bg-red-600 transition-all duration-300 transform hover:scale-105">
+                                Buy now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Navigation -->
+        <button id="prev-btn" class="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-all duration-300 z-20">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="next-btn" class="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-all duration-300 z-20">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- Slide Indicators -->
+        <div class="absolute bottom-8 left-8 flex space-x-2 z-20">
+            <button class="slide-indicator w-3 h-3 bg-dazn-red rounded-full active" data-slide="0"></button>
+            <!-- <button class="slide-indicator w-3 h-3 bg-white/50 rounded-full" data-slide="1"></button> -->
+            <button class="slide-indicator w-3 h-3 bg-white/50 rounded-full" data-slide="2"></button>
+            <button class="slide-indicator w-3 h-3 bg-white/50 rounded-full" data-slide="3"></button>
+        </div>
+    </section>
+
+    <!-- Sports Categories -->
+    <section class="py-8 bg-dazn-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex overflow-x-auto space-x-4 pb-4">
+                <div class="flex-shrink-0 bg-dazn-light-gray text-white px-6 py-3 rounded-xl flex items-center space-x-2 cursor-pointer hover:bg--600 transition-colors">
+                    <img src="https://image.discovery.indazn.com/eu/v4/onboarding-images/none/sn_289u5typ3vp4ifwh5thalohmq/fill/center/top/none/100/0/0/png/image/6" 
+                    alt=""
+                    class="w-25 h-12">
+                    <span class="font-semibold text-2xl">Soccer</span>
+                </div>
+                <!-- ============== -->
+                <div class="flex-shrink-0 bg-dazn-light-gray text-white px-6 py-3 rounded-xl flex items-center space-x-2 cursor-pointer hover:bg--600 transition-colors">
+                    <img src="https://image.discovery.indazn.com/eu/v4/onboarding-images/none/sn_wy3kluvb4efae1of0d8146c1/fill/center/top/none/100/0/0/png/image/6" 
+                    alt=""
+                    class="w-5 h-8">
+                    <span class="font-semibold text-2xl">NFL Game Pass</span>
+                </div>
+                <!-- ======== -->
+                <div class="flex-shrink-0 bg-dazn-light-gray text-white px-6 py-3 rounded-xl flex items-center space-x-2 cursor-pointer hover:bg--600 transition-colors">
+                  <img src="https://image.discovery.indazn.com/eu/v4/onboarding-images/none/sn_2x2oqzx60orpoeugkd754ga17/fill/center/top/none/100/0/0/png/image/6" 
+                    alt=""
+                    class="w-20 h-15">
+                    <span class="font-semibold text-2xl">Boxing</span>
+                </div>
+                <!-- =============== -->
+                <div class="flex-shrink-0 bg-dazn-light-gray text-white px-6 py-3 rounded-xl flex items-center space-x-2 cursor-pointer hover:bg--600 transition-colors">
+                  <img src="https://image.discovery.indazn.com/eu/v4/onboarding-images/none/sn_7583yd99cld85m3rqtuhyruxi/fill/center/top/none/100/0/0/png/image/6" 
+                    alt=""
+                    class="w-20 h-15">
+                    <span class="font-semibold text-2xl">Liv Golf</span>
+                </div>
+                <!-- ============= -->
+                <div class="flex-shrink-0 bg-dazn-light-gray text-white px-6 py-3 rounded-xl flex items-center space-x-2 cursor-pointer hover:bg--600 transition-colors">
+                  <img src="https://image.discovery.indazn.com/eu/v4/onboarding-images/none/sn_b5udgm9vakjqz8dcmy5b2g0xt/fill/center/top/none/100/0/0/png/image/6" 
+                    alt=""
+                    class="w-20 h-15">
+                    <span class="font-semibold text-2xl">Enterprise National League</span>
+                </div>
+                <!-- ============= -->
+                <div class="flex-shrink-0 bg-dazn-light-gray text-white px-6 py-3 rounded-xl flex items-center space-x-2 cursor-pointer hover:bg--600 transition-colors">
+                  <img src="https://image.discovery.indazn.com/eu/v4/onboarding-images/none/sn_2x2oqzx60orpoeugkd754ga17/fill/center/top/none/100/0/0/png/image/6" 
+                    alt=""
+                    class="w-20 h-15">
+                    <span class="font-semibold text-2xl">Boxing</span>
+                </div>
+                <!-- ============= -->
+                <div class="flex-shrink-0 bg-dazn-light-gray text-white px-6 py-3 rounded-xl flex items-center space-x-2 cursor-pointer hover:bg--600 transition-colors">
+                  <img src="https://image.discovery.indazn.com/eu/v4/onboarding-images/none/sn_2x2oqzx60orpoeugkd754ga17/fill/center/top/none/100/0/0/png/image/6" 
+                    alt=""
+                    class="w-20 h-15">
+                    <span class="font-semibold text-2xl">Boxing</span>
+                </div>
+                <!-- ============= -->
+                <div class="flex-shrink-0 bg-dazn-light-gray text-white px-6 py-3 rounded-xl flex items-center space-x-2 cursor-pointer hover:bg--600 transition-colors">
+                  <img src="https://image.discovery.indazn.com/eu/v4/onboarding-images/none/sn_2x2oqzx60orpoeugkd754ga17/fill/center/top/none/100/0/0/png/image/6" 
+                    alt=""
+                    class="w-20 h-15">
+                    <span class="font-semibold text-2xl">Boxing</span>
+                </div>
+                <!-- ===================== -->
+                <div class="flex-shrink-0 bg-dazn-light-gray text-white px-6 py-3 rounded-xl flex items-center space-x-2 cursor-pointer hover:bg--600 transition-colors">
+                  <img src="https://image.discovery.indazn.com/eu/v4/onboarding-images/none/sn_2x2oqzx60orpoeugkd754ga17/fill/center/top/none/100/0/0/png/image/6" 
+                    alt=""
+                    class="w-20 h-15">
+                    <span class="font-semibold text-2xl">Boxing</span>
+                </div>
+                <!-- =========== -->
+                <div class="flex-shrink-0 bg-dazn-light-gray text-white px-6 py-3 rounded-xl flex items-center space-x-2 cursor-pointer hover:bg--600 transition-colors">
+                  <img src="https://image.discovery.indazn.com/eu/v4/onboarding-images/none/sn_2x2oqzx60orpoeugkd754ga17/fill/center/top/none/100/0/0/png/image/6" 
+                    alt=""
+                    class="w-20 h-15">
+                    <span class="font-semibold text-2xl">Boxing</span>
+                </div>
+                <!-- =============== -->
+                <div class="flex-shrink-0 bg-dazn-light-gray text-white px-6 py-3 rounded-xl flex items-center space-x-2 cursor-pointer hover:bg--600 transition-colors">
+                  <img src="https://image.discovery.indazn.com/eu/v4/onboarding-images/none/sn_2x2oqzx60orpoeugkd754ga17/fill/center/top/none/100/0/0/png/image/6" 
+                    alt=""
+                    class="w-20 h-15">
+                    <span class="font-semibold text-2xl">Boxing</span>
+                </div>
+                <!-- ================ -->
+                <div class="flex-shrink-0 bg-dazn-light-gray text-white px-6 py-3 rounded-xl flex items-center space-x-2 cursor-pointer hover:bg--600 transition-colors">
+                  <img src="https://image.discovery.indazn.com/eu/v4/onboarding-images/none/sn_2x2oqzx60orpoeugkd754ga17/fill/center/top/none/100/0/0/png/image/6" 
+                    alt=""
+                    class="w-20 h-15">
+                    <span class="font-semibold text-2xl">Boxing</span>
+                </div>
+                <!-- =================================== -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <div class="bg-dazn-dark">
+        <!-- Best of DAZN -->
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8">Best of DAZN</h2>
+                <div class="flex overflow-x-auto no-scrollbar space-x-4 pb-4">
+                    <!-- ================================= -->
+                    <div class="flex-shrink-0 bg-dazn-light-gray rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <img src="https://image.discovery.indazn.com/eu/v3/eu/none/g20tg6qupmg1wmqvxd5g5vzw_image-header_pRow_1754487134000/fill/none/top/none/85/501/280/webp/image" 
+                             alt="Soccer highlight" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">itauma vs. Whyte: The Debate</h3>
+                            <p class="text-gray-300 text-sm">First Round TV</p>
+                        </div>
+                    </div>
+                    <!-- =========================== -->
+                    <div class="flex-shrink-0 bg-dazn-light-gray rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <img src="https://image.discovery.indazn.com/eu/v3/eu/none/1sqzdbkq8evsi136fqtlxqepw9_image-header_pRow_1754424973000/fill/none/top/none/85/501/280/webp/image" 
+                             alt="Boxing highlight" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Ariel x Ade: The Boxing Show | Ep. 37</h3>
+                            <p class="text-gray-300 text-sm">The Ariel and Ade Show</p>
+                        </div>
+                    </div>
+                    <!-- ========================================== -->
+                    <div class="flex-shrink-0 bg-dazn-light-gray rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <img src="https://image.discovery.indazn.com/eu/v3/eu/none/1a5l373ipq2ef1r7agc9qaqoaf_image-header_pRow_1754422859000/fill/none/top/none/85/501/280/webp/image" 
+                             alt="Serie A highlight" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Pro League Highlights Show | Matchday 2</h3>
+                            <p class="text-gray-300 text-sm">Jupiler Pro League</p>
+                        </div>
+                    </div>
+                    <!-- ================================================================ -->
+                    <div class="flex-shrink-0 bg-dazn-light-gray rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <img src="https://image.discovery.indazn.com/eu/v3/eu/none/1kmn05x69x7l1luc3wk9wako5_image-header_pRow_1724920792000/fill/none/top/none/85/501/280/webp/image" 
+                             alt="Soccer highlight" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Good Morning Football</h3>
+                            <p class="text-gray-300 text-sm">NFL Game Pass</p>
+                        </div>
+                    </div>
+                    <!-- ============================== -->
+                    <div class="flex-shrink-0 bg-dazn-light-gray rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <img src="https://image.discovery.indazn.com/eu/v3/eu/none/1i0u4mmy9emvw1nijvb515xq4p_image-header_pRow_1754471837000/fill/none/top/none/85/501/280/webp/image" 
+                             alt="Soccer highlight" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Castillo & Moses Itauma | The Main Event</h3>
+                            <p class="text-gray-300 text-sm">One on One Boxing</p>
+                        </div>
+                    </div>
+                    <!-- ======================================== -->
+                    <div class="flex-shrink-0 bg-dazn-light-gray rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <img src="https://image.discovery.indazn.com/eu/v3/eu/none/7b01j188tropi6o7anuxap7ry_image-header_pRow_1754325577000/fill/none/top/none/85/501/280/webp/image" 
+                             alt="Soccer highlight" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">DAZN Transfer by Fabrizio Romano - 4 August</h3>
+                            <p class="text-gray-300 text-sm">DAZN Transfer by Fabrizio Romano</p>
+                        </div>
+                    </div>
+                    <!-- =========================== -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Don't Miss -->
+        <section class="py-16 bg-dazn-gray">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8">Don't Miss</h2>
+                <div class="flex overflow-x-auto no-scrollbar space-x-4 pb-4">
+                    <!-- ================================= -->
+                    <div class="h-40 flex-shrink-0 bg-dazn-light-gray rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <img src="https://image.discovery.indazn.com/eu/v3/eu/none/7b01j188tropi6o7anuxap7ry_image-header_pRow_1754325577000/fill/none/top/none/85/501/280/webp/image" 
+                             alt="Soccer highlight"
+                             class="w-full h-48 object-cover">
+                    </div>
+                    <!-- =========================== -->
+                    <div class="h-40 flex-shrink-0 bg-dazn-light-gray rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <img src="https://image.discovery.indazn.com/eu/v3/eu/none/7b01j188tropi6o7anuxap7ry_image-header_pRow_1754325577000/fill/none/top/none/85/501/280/webp/image" 
+                             alt="Soccer highlight"
+                             class="w-full h-48 object-cover">
+                    </div>
+                    <!-- ========================================== -->
+                    <div class="h-40 flex-shrink-0 bg-dazn-light-gray rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <img src="https://image.discovery.indazn.com/eu/v3/eu/none/7b01j188tropi6o7anuxap7ry_image-header_pRow_1754325577000/fill/none/top/none/85/501/280/webp/image" 
+                             alt="Soccer highlight"
+                             class="w-full h-48 object-cover">
+                    </div>
+                    <!-- ================================================================ -->
+                    <div class="h-40 flex-shrink-0 bg-dazn-light-gray rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <img src="https://image.discovery.indazn.com/eu/v3/eu/none/7b01j188tropi6o7anuxap7ry_image-header_pRow_1754325577000/fill/none/top/none/85/501/280/webp/image" 
+                             alt="Soccer highlight"
+                             class="w-full h-48 object-cover">
+                    </div>
+                    <!-- ============================== -->
+                    <div class="h-40 flex-shrink-0 bg-dazn-light-gray rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <img src="https://image.discovery.indazn.com/eu/v3/eu/none/7b01j188tropi6o7anuxap7ry_image-header_pRow_1754325577000/fill/none/top/none/85/501/280/webp/image" 
+                             alt="Soccer highlight"
+                             class="w-full h-48 object-cover">
+                    </div>
+                    <!-- ======================================== -->
+                    <div class="h-40 flex-shrink-0 bg-dazn-light-gray rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <img src="https://image.discovery.indazn.com/eu/v3/eu/none/7b01j188tropi6o7anuxap7ry_image-header_pRow_1754325577000/fill/none/top/none/85/501/280/webp/image" 
+                             alt="Soccer highlight"
+                             class="w-full h-48 object-cover">
+                    </div>
+                    <!-- =========================== -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Live and Coming Up -->
+        <section class="py-16 bg-dazn-gray">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8">Live and Coming Up</h2>
+                <div class="flex overflow-x-auto no-scrollbar space-x-4 pb-4">
+                    <!-- ================================= -->
+                    <div class="h-40 flex-shrink-0 bg-dazn-light-gray rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <img src="https://image.discovery.indazn.com/eu/v3/eu/none/6ln0hgy1rx2suzv4svtm0syfp_image-header_pRow_1752002452000/fill/none/top/none/85/501/280/webp/image" 
+                             alt="Soccer highlight"
+                             class="w-full h-48 object-cover">
+                    </div>
+                    <!-- =========================== -->
+                    <div class="h-40 flex-shrink-0 bg-dazn-light-gray rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <img src="https://image.discovery.indazn.com/eu/v3/eu/none/nxa6w3nnxfkdktpqywz7g6z8_image-header_pRow_1752002453000/fill/none/top/none/85/501/280/webp/image" 
+                             alt="Soccer highlight"
+                             class="w-full h-48 object-cover">
+                    </div>
+                    <!-- ========================================== -->
+                    <div class="h-40 flex-shrink-0 bg-dazn-light-gray rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <img src="https://image.discovery.indazn.com/eu/v3/eu/none/af0mco3knqrswo70f9egw619f_image-header_pRow_1751559463000/fill/none/top/none/85/501/280/webp/image" 
+                             alt="Soccer highlight"
+                             class="w-full h-48 object-cover">
+                    </div>
+                    <!-- ================================================================ -->
+                    <div class="h-40 flex-shrink-0 bg-dazn-light-gray rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <img src="https://image.discovery.indazn.com/eu/v3/eu/none/7b01j188tropi6o7anuxap7ry_image-header_pRow_1754325577000/fill/none/top/none/85/501/280/webp/image" 
+                             alt="Soccer highlight"
+                             class="w-full h-48 object-cover">
+                    </div>
+                    <!-- ============================== -->
+                    <div class="h-40 flex-shrink-0 bg-dazn-light-gray rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <img src="https://image.discovery.indazn.com/eu/v3/eu/none/7b01j188tropi6o7anuxap7ry_image-header_pRow_1754325577000/fill/none/top/none/85/501/280/webp/image" 
+                             alt="Soccer highlight"
+                             class="w-full h-48 object-cover">
+                    </div>
+                    <!-- ======================================== -->
+                    <div class="h-40 flex-shrink-0 bg-dazn-light-gray rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
+                        <img src="https://image.discovery.indazn.com/eu/v3/eu/none/7b01j188tropi6o7anuxap7ry_image-header_pRow_1754325577000/fill/none/top/none/85/501/280/webp/image" 
+                             alt="Soccer highlight"
+                             class="w-full h-48 object-cover">
+                    </div>
+                    <!-- =========================== -->
+                </div>
+            </div>
+        </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-dazn-dark py-12 border-t border-dazn-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Sports</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white transition-colors">Soccer</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Boxing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">MMA</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Basketball</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Help</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Device Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Legal</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white transition-colors">Terms & Conditions</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Cookie Notice</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">More</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white transition-colors">Gift Cards</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Redeem</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-dazn-gray mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 DAZN. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Minimal JavaScript for carousel and mobile menu -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Carousel functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.slide-indicator');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                slide.style.opacity = i === index ? '1' : '0';
+            });
+            
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('bg-dazn-red', i === index);
+                indicator.classList.toggle('bg-white/50', i !== index);
+            });
+            
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        // Event listeners
+        document.getElementById('next-btn').addEventListener('click', nextSlide);
+        document.getElementById('prev-btn').addEventListener('click', prevSlide);
+
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => showSlide(index));
+        });
+
+        // Auto-advance carousel
+        setInterval(nextSlide, 5000);
+
+        // Initialize first slide
+        showSlide(0);
+    </script>
+</body>
+</html>
